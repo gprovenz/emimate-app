@@ -13,12 +13,6 @@ no build step, no assets, no dependencies.
 2. Wait for the first deploy, then take the URL GitHub shows.
 3. Paste that URL into the Play Console listing, under Privacy policy.
 
-## Before publishing
-
-Replace **[YOUR CONTACT EMAIL]** and **[LA TUA EMAIL DI CONTATTO]** in `index.html` with a real
-address. Google Play requires a contact email and shows it publicly, so use one you are willing
-to make public.
-
 ## Keeping it true
 
 The policy claims the app collects nothing and cannot transmit anything. That rests on the app
