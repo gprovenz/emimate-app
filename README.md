@@ -73,7 +73,7 @@ medico.
 ## About this repository
 
 This repository holds the app's **privacy policy**, in English and Italian, served at
-<https://gprovenz.github.io/emimate-privacy/>. Google Play requires a policy at a public URL, and
+<https://gprovenz.github.io/emimate-app/>. Google Play requires a policy at a public URL, and
 the app's source repository is private, so the policy lives here on its own.
 
 The policy states that the app collects nothing and cannot transmit anything. That rests on the
