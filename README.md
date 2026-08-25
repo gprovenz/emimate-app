@@ -1,4 +1,4 @@
-# Emimate
+# emimate
 
 A headache diary that stays out of your way. One tap to open an attack, one tap to close it —
 everything else is optional.
@@ -10,7 +10,7 @@ everything else is optional.
 
 ## English
 
-When an attack starts, filling in a form is the last thing you want to do. Emimate asks for one
+When an attack starts, filling in a form is the last thing you want to do. emimate asks for one
 tap to open it and one tap to close it. Intensity, medication, triggers and notes are optional,
 and you add them afterwards if you feel like it.
 
@@ -24,7 +24,7 @@ summary numbers, a month-by-month calendar with days shaded by intensity, and th
 attacks. The intensity scale uses one hue in four steps, so it still reads when photocopied in
 black and white.
 
-**Your data stays yours.** Emimate does not even ask for permission to use the internet — Android
+**Your data stays yours.** emimate does not even ask for permission to use the internet — Android
 enforces that, so it is a property of the app rather than a promise. No account, no ads, no
 analytics, no automatic backup to Drive.
 
@@ -33,7 +33,7 @@ it later. Share a report or a spreadsheet for any period you choose.
 
 **English and Italian**, interface and report, switchable inside the app.
 
-Emimate is a diary. It records what you tell it and prints it back out. It does not diagnose,
+emimate is a diary. It records what you tell it and prints it back out. It does not diagnose,
 does not give medical advice, and is not a medical device. Decisions about your health belong
 with your doctor.
 
@@ -41,7 +41,7 @@ with your doctor.
 
 ## Italiano
 
-Quando arriva un attacco non hai voglia di compilare moduli. Emimate ti chiede un tap per aprirlo
+Quando arriva un attacco non hai voglia di compilare moduli. emimate ti chiede un tap per aprirlo
 e un tap per chiuderlo. Intensità, farmaci, trigger e note sono facoltativi, e li aggiungi dopo,
 con calma, se ti va.
 
@@ -54,7 +54,7 @@ l'intestazione, cinque numeri di sintesi, il calendario mese per mese con i gior
 intensità e la tabella completa degli attacchi. La scala di intensità usa una sola tinta in
 quattro gradini, quindi resta leggibile anche fotocopiata in bianco e nero.
 
-**I tuoi dati restano tuoi.** Emimate non chiede nemmeno il permesso di accedere a internet — è
+**I tuoi dati restano tuoi.** emimate non chiede nemmeno il permesso di accedere a internet — è
 Android a farlo rispettare, quindi è una proprietà dell'app, non una promessa. Nessun account,
 nessuna pubblicità, nessun analytics, nessun backup automatico su Drive.
 
@@ -64,7 +64,7 @@ scegli.
 
 **Italiano e inglese**, interfaccia e referto, con il cambio lingua dentro l'app.
 
-Emimate è un diario: registra quello che gli dici e te lo ristampa. Non diagnostica, non dà
+emimate è un diario: registra quello che gli dici e te lo ristampa. Non diagnostica, non dà
 consigli medici e non è un dispositivo medico. Le decisioni sulla tua salute spettano al tuo
 medico.
 
@@ -72,9 +72,16 @@ medico.
 
 ## About this repository
 
-This repository holds the app's **privacy policy**, in English and Italian, served at
-<https://gprovenz.github.io/emimate-app/>. Google Play requires a policy at a public URL, and
-the app's source repository is private, so the policy lives here on its own.
+This repository is the app's public site, served at <https://gprovenz.github.io/emimate-app/>:
+
+| Page | What it is |
+| --- | --- |
+| `index.html` | The landing page — what the app does, in English and Italian |
+| `privacy.html` | The **privacy policy**, in English and Italian |
+
+Google Play requires a policy at a public URL, and the app's source repository is private, so the
+policy lives here. It is at <https://gprovenz.github.io/emimate-app/privacy.html> — that is the
+address to give Play, not the site root.
 
 The policy states that the app collects nothing and cannot transmit anything. That rests on the
 app not requesting the `INTERNET` permission and on `allowBackup` being off. If either ever
