@@ -49,7 +49,7 @@ con calma, se ti va.
 notifica mostra il timer e il tasto Termina, quindi non devi nemmeno aprire l'app, e un widget
 fa lo stesso dalla schermata home. Te ne sei accorto in ritardo? Scegli data e ora dal calendario.
 
-**Il referto che il medico legge volentieri.** L'export PDF è un documento in A4 con
+**Il report che il medico legge volentieri.** L'export PDF è un documento in A4 con
 l'intestazione, cinque numeri di sintesi, il calendario mese per mese con i giorni colorati per
 intensità e la tabella completa degli attacchi. La scala di intensità usa una sola tinta in
 quattro gradini, quindi resta leggibile anche fotocopiata in bianco e nero.
@@ -59,10 +59,10 @@ Android a farlo rispettare, quindi è una proprietà dell'app, non una promessa.
 nessuna pubblicità, nessun analytics, nessun backup automatico su Drive.
 
 **I dati li porti via quando vuoi.** Fai il backup dell'intero diario in un file CSV che collochi
-tu, e lo ripristini quando serve. Condividi un referto o un foglio di calcolo per il periodo che
+tu, e lo ripristini quando serve. Condividi un report o un foglio di calcolo per il periodo che
 scegli.
 
-**Cinque lingue** — italiano, inglese, francese, spagnolo e tedesco — interfaccia e referto, con il cambio lingua dentro l'app.
+**Cinque lingue** — italiano, inglese, francese, spagnolo e tedesco — interfaccia e report, con il cambio lingua dentro l'app.
 
 Emimate è un diario: registra quello che gli dici e te lo ristampa. Non diagnostica, non dà
 consigli medici e non è un dispositivo medico. Le decisioni sulla tua salute spettano al tuo
