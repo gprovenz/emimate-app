@@ -31,7 +31,7 @@ analytics, no automatic backup to Drive.
 **Take your data with you.** Back up the whole diary to a CSV file you place yourself, and restore
 it later. Share a report or a spreadsheet for any period you choose.
 
-**English and Italian**, interface and report, switchable inside the app.
+**Five languages** — English, Italian, French, Spanish and German — interface and report, switchable inside the app.
 
 Emimate is a diary. It records what you tell it and prints it back out. It does not diagnose,
 does not give medical advice, and is not a medical device. Decisions about your health belong
@@ -62,7 +62,7 @@ nessuna pubblicità, nessun analytics, nessun backup automatico su Drive.
 tu, e lo ripristini quando serve. Condividi un referto o un foglio di calcolo per il periodo che
 scegli.
 
-**Italiano e inglese**, interfaccia e referto, con il cambio lingua dentro l'app.
+**Cinque lingue** — italiano, inglese, francese, spagnolo e tedesco — interfaccia e referto, con il cambio lingua dentro l'app.
 
 Emimate è un diario: registra quello che gli dici e te lo ristampa. Non diagnostica, non dà
 consigli medici e non è un dispositivo medico. Le decisioni sulla tua salute spettano al tuo
