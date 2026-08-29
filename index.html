@@ -1,160 +1,206 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Emimate — Headache diary / Diario delle cefalee</title>
-<meta name="description" content="Emimate is an Android headache diary. One tap to open an attack, one tap to close it. A PDF report for your doctor. No account, no ads, and the data never leaves the phone.">
-<style>
-  :root {
-    --bg: #faf8f5; --surface: #ffffff; --ink: #17171c; --muted: #5e5e6b;
-    --line: #e5e1da; --brand: #0e6b75; --accent: #4f9bd0;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #131218; --surface: #1c1b23; --ink: #f3f1ee; --muted: #a6a3b0;
-      --line: #322f3c; --brand: #4fb3bd; --accent: #7bb8e0;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 48px 20px 72px; background: var(--bg); color: var(--ink);
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    line-height: 1.62; font-size: 17px;
-  }
-  main { max-width: 720px; margin: 0 auto; }
-  .hero { text-align: center; }
-  .hero img { width: 132px; height: 132px; object-fit: contain; }
-  h1 { font-size: 44px; letter-spacing: -0.03em; margin: 14px 0 0; font-weight: 700; }
-  .tagline { color: var(--muted); font-size: 18px; margin: 8px 0 0; }
-  .cta { margin: 30px 0 0; }
-  .btn {
-    display: inline-block; background: var(--brand); color: #fff; text-decoration: none;
-    padding: 13px 26px; border-radius: 999px; font-weight: 600; font-size: 16px;
-  }
-  .cta .note { color: var(--muted); font-size: 14px; margin: 12px 0 0; }
-  .langs { text-align: center; color: var(--muted); font-size: 15px; margin: 34px 0 0; }
-  h2 { font-size: 24px; margin: 52px 0 6px; letter-spacing: -0.01em; }
-  h3 { font-size: 17.5px; margin: 30px 0 2px; }
-  hr { border: 0; border-top: 1px solid var(--line); margin: 56px 0; }
-  .disclaimer {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
-    padding: 16px 18px; margin-top: 30px; color: var(--muted); font-size: 15.5px;
-  }
-  footer {
-    color: var(--muted); font-size: 14px; margin-top: 60px; text-align: center;
-    border-top: 1px solid var(--line); padding-top: 22px;
-  }
-  a { color: var(--brand); }
-  footer a { margin: 0 8px; }
-</style>
+<title>Emimate · Diario delle cefalee per Android</title>
+<meta name="description" content="Emimate è un diario delle cefalee per Android: un tocco apre l'attacco, un tocco lo chiude. Report PDF per il medico, dati solo sul telefono, gratuita e senza pubblicità.">
+<link rel="canonical" href="./">
+<link rel="alternate" hreflang="it" href="./">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="alternate" hreflang="x-default" href="./">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Emimate · Diario delle cefalee">
+<meta property="og:description" content="Un tocco apre l'attacco, un tocco lo chiude. Report PDF per il medico, dati solo sul telefono, gratuita e senza pubblicità.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="logo.svg" alt="" width="38" height="38">
+      <span>emimate</span>
+    </a>
+    <nav class="langs" aria-label="Lingua">
+      <span aria-current="page">Italiano</span>
+      <a href="en/" hreflang="en">English</a>
+    </nav>
+  </div>
+</header>
+
 <main>
 
-<div class="hero" id="top">
-  <img src="logo.svg" alt="Emimate">
-  <h1>Emimate</h1>
-  <p class="tagline">Headache diary · Diario delle cefalee</p>
-  <div class="cta">
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.emimate.app">Get it on Google Play</a>
-    <p class="note">Free. No account, no advertising.<br>Gratuita. Nessun account, nessuna pubblicità.</p>
-  </div>
-</div>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1>Il diario delle cefalee che si compila con un tocco.</h1>
+        <p class="lede">Un tocco apre l'attacco, un tocco lo chiude. Tutto il resto è
+          facoltativo: i dettagli si aggiungono quando è più conveniente
+          farlo, durante l'attacco, appena terminato oppure a distanza di giorni.</p>
+        <ul class="claims">
+          <li>Gratuita</li>
+          <li>Senza pubblicità</li>
+          <li>Senza account</li>
+          <li>I dati restano sul telefono</li>
+        </ul>
+        <p class="soon">Presto su Google Play.</p>
+      </div>
+      <div class="phone">
+        <img src="assets/screens/oggi.webp" width="800" height="1547"
+             alt="La schermata principale di Emimate: un solo pulsante, Inizia adesso, e sotto l'elenco degli attacchi recenti.">
+      </div>
+    </div>
+  </section>
 
-<p class="langs"><strong>English</strong> · <a href="#italiano">Italiano</a></p>
+  <section class="plain">
+    <div class="wrap">
+      <h2>Perché esiste</h2>
+      <p>Emimate nasce da chi convive con la cefalea. Durante un attacco
+        compilare un modulo lungo è l'ultima cosa che si riesce a fare, e un diario che chiede
+        troppi passaggi finisce per restare vuoto. Emimate chiede un gesto solo, e aspetta.</p>
+    </div>
+  </section>
 
-<h2>A headache diary that asks as little as possible of you</h2>
-<p>When an attack starts, filling in a form is the last thing you want to do. Emimate asks for one
-tap to open the attack and one tap to close it. Intensity, medication, triggers and notes are all
-optional: you add them afterwards, if you feel like it.</p>
+  <section class="feature">
+    <div class="wrap">
+      <div class="feature-copy">
+        <p class="eyebrow">Semplicità</p>
+        <h2>Un gesto adesso, i dettagli con calma</h2>
+        <p>La schermata principale ha un solo pulsante: si preme quando l'attacco comincia e si
+          preme di nuovo quando è passato. Da quel momento l'attacco è registrato, e nessun campo
+          è obbligatorio.</p>
+        <ul class="points">
+          <li>Intensità, sede del dolore, sintomi, farmaci con il numero di dosi, possibili
+            trigger e una nota libera.</li>
+          <li>Si compilano durante l'attacco, subito dopo oppure a distanza di giorni: decide chi
+            scrive, non l'applicazione.</li>
+          <li>Mentre l'attacco è in corso, una notifica mostra il cronometro e il pulsante per
+            chiuderlo. Un widget sulla schermata Home fa lo stesso.</li>
+          <li>Se l'attacco viene registrato in ritardo, data e ora si scelgono dal calendario.</li>
+        </ul>
+      </div>
+      <div class="phone">
+        <img src="assets/screens/dettagli.webp" width="800" height="1189"
+             alt="La scheda di un attacco: farmaci assunti con il numero di dosi, possibili trigger e il campo per la nota.">
+      </div>
+    </div>
+  </section>
 
-<h3>One tap to record</h3>
-<p>One large button in the middle of the screen. While an attack is running, a notification shows
-the timer and an End button, so you never have to open the app, and a home screen widget does the
-same from there. Noticed late? Pick the date and time from the calendar instead.</p>
+  <section class="feature mirrored">
+    <div class="wrap">
+      <div class="feature-copy">
+        <p class="eyebrow">Sede del dolore</p>
+        <h2>Dove fa male, indicato sulla testa</h2>
+        <p>Quindici aree, davanti e dietro. Destra e sinistra sono quelle di chi compila, non
+          quelle dello schermo. Le aree entrano nel report e nell'esportazione insieme a tutto
+          il resto, e nel report sono riassunte su due miniature del volto, con le zone più scure dove il
+          dolore è tornato più spesso.</p>
+      </div>
+      <div class="phone">
+        <img src="assets/screens/sede-dolore.webp" width="800" height="1498"
+             alt="La scheda di un attacco con la scala di intensità e le due rappresentazioni del volto su cui toccare le aree colpite.">
+      </div>
+    </div>
+  </section>
 
-<h3>A report to take to your doctor</h3>
-<p>The PDF export is an A4 document: a header with your name and the period, five summary figures,
-a month-by-month calendar with days shaded by intensity, and the full table of attacks with times,
-duration, medication, triggers and notes. The intensity scale uses a single hue in four steps, so
-the report still reads when photocopied in black and white. You choose the period: the last 3, 6
-or 12 months, a custom range, or the whole diary.</p>
+  <section class="feature">
+    <div class="wrap">
+      <div class="feature-copy">
+        <p class="eyebrow">Storico</p>
+        <h2>Il mese si legge a colpo d'occhio</h2>
+        <p>Ogni attacco resta registrato con orari, durata e intensità. Il calendario colora i
+          giorni secondo l'intensità e riassume il mese in tre numeri: quanti attacchi, quante ore
+          in tutto e quanto sono durati in media.</p>
+      </div>
+      <div class="phone">
+        <img src="assets/screens/calendario.webp" width="800" height="1547"
+             alt="Il calendario mensile di Emimate con i giorni colorati per intensità e i tre numeri di sintesi del mese.">
+      </div>
+    </div>
+  </section>
 
-<h3>Your data stays on the phone</h3>
-<p>Emimate does not request permission to use the internet, and you can check that in the app's
-permission list on the store page. No account to create, no advertising, no usage analytics, no
-automatic backup to online services. What the app does with your data is set out in the
-<a href="privacy.html">privacy policy</a>.</p>
+  <section class="report">
+    <div class="wrap">
+      <div class="split">
+        <div class="report-copy">
+          <p class="eyebrow">Report</p>
+          <h2>Un documento che il medico legge in un minuto</h2>
+          <p>L'esportazione in PDF non è un elenco di dati: è una pagina A4 impaginata, con intestazione,
+            numeri di sintesi, calendario mese per mese, sede del dolore e la tabella completa
+            degli attacchi con orari, durata, sintomi, farmaci, trigger e note.</p>
+          <ul class="points">
+            <li>Il periodo si sceglie: ultimi 3, 6 o 12 mesi, un intervallo a piacere oppure
+              l'intero diario.</li>
+            <li>Il file si apre con un'altra applicazione o si condivide come qualsiasi altro
+              documento.</li>
+            <li>Gli stessi dati si esportano anche in CSV, per chi preferisce un foglio di
+              calcolo.</li>
+          </ul>
+        </div>
+        <div class="phone">
+          <img src="assets/screens/esporta.webp" width="800" height="1547"
+               alt="La finestra di esportazione: formato PDF o CSV, scelta del periodo e i comandi per aprire o condividere il file.">
+        </div>
+      </div>
+      <figure>
+        <img src="assets/screens/report.webp" width="1400" height="1012" loading="lazy"
+             alt="Una pagina del report PDF: le due miniature del volto con la sede del dolore e la panoramica mensile con i giorni colorati per intensità.">
+        <figcaption>Una pagina del report: sede del dolore e panoramica mensile.</figcaption>
+      </figure>
+    </div>
+  </section>
 
-<h3>Backup and moving to a new phone</h3>
-<p>Export the whole diary to a CSV file and read it back whenever you want. Restoring merges the
-file with what is already recorded and never deletes attacks the file does not mention. It also
-reads CSV files exported by other headache diaries.</p>
+  <section class="band">
+    <div class="wrap">
+      <h2>Una privacy verificabile, non promessa</h2>
+      <p>Emimate non richiede il permesso di accedere a Internet, e chiunque può controllarlo
+        nell'elenco dei permessi dell'applicazione. Non esiste un server a cui inviare qualcosa:
+        nessun cloud, nessuna statistica d'uso, nessun backup automatico verso servizi online.</p>
+      <p>Il diario resta sul telefono. Per il cambio telefono si esporta l'intero diario in un
+        file CSV e lo si rilegge quando serve.</p>
+    </div>
+  </section>
 
-<h3>Five languages</h3>
-<p>Interface and report in English, Italian, French, Spanish and German, switchable inside the app. Light theme, dark theme, or
-whatever the system uses.</p>
-
-<div class="disclaimer">
-Emimate is a diary: it records what you write and gives it back to you. It does not diagnose, does
-not give medical advice, and is not a medical device. For any decision about your health, talk to
-your doctor.
-</div>
-
-<hr>
-
-<div lang="it" id="italiano">
-
-<p class="langs"><a href="#top">English</a> · <strong>Italiano</strong></p>
-
-<h2>Un diario delle cefalee che ti chiede il minimo</h2>
-<p>Quando arriva un attacco, compilare un modulo è l'ultima cosa che hai voglia di fare. Emimate
-chiede un tocco per aprire l'attacco e un tocco per chiuderlo. Intensità, farmaci, trigger e note
-sono tutti facoltativi: li aggiungi dopo, con calma, se ti va.</p>
-
-<h3>Un tocco per registrare</h3>
-<p>Un pulsante grande al centro della schermata. Mentre l'attacco è in corso, una notifica mostra
-il cronometro e il pulsante Termina, senza bisogno di aprire l'app, e un widget fa lo stesso dalla
-schermata Home. Se te ne accorgi in ritardo, scegli data e ora dal calendario.</p>
-
-<h3>Un report da portare dal medico</h3>
-<p>L'esportazione in PDF è un documento in formato A4: intestazione con il tuo nome e il periodo,
-cinque numeri di sintesi, il calendario mese per mese con i giorni colorati in base all'intensità e
-la tabella completa degli attacchi con orari, durata, farmaci, trigger e note. La scala di
-intensità usa una sola tinta in quattro gradini, così il report resta leggibile anche fotocopiato
-in bianco e nero. Scegli tu il periodo: ultimi 3, 6 o 12 mesi, un intervallo a piacere oppure
-tutto il diario.</p>
-
-<h3>I dati restano sul telefono</h3>
-<p>Emimate non chiede il permesso di accedere a internet, e lo puoi verificare nell'elenco dei
-permessi sulla pagina dello Store. Nessun account da creare, nessuna pubblicità, nessuna raccolta
-di statistiche d'uso, nessun backup automatico verso servizi online. Cosa fa l'app con i tuoi dati
-è scritto nell'<a href="privacy.html">informativa sulla privacy</a>.</p>
-
-<h3>Backup e cambio telefono</h3>
-<p>Esporta l'intero diario in un file CSV e rileggilo quando vuoi. Il ripristino unisce il file con
-quello che è già registrato e non cancella mai gli attacchi che il file non nomina. Legge anche i
-file CSV esportati da altri diari delle cefalee.</p>
-
-<h3>Cinque lingue</h3>
-<p>Interfaccia e report in italiano, inglese, francese, spagnolo e tedesco, con il cambio lingua dentro l'app. Tema chiaro,
-scuro o come il sistema.</p>
-
-<div class="disclaimer">
-Emimate è un diario: registra quello che scrivi e te lo restituisce. Non formula diagnosi, non
-fornisce consigli medici e non è un dispositivo medico. Per qualsiasi decisione sulla tua salute
-rivolgiti al tuo medico.
-</div>
-
-</div>
-
-<footer>
-  <a href="privacy.html">Privacy policy</a> ·
-  <a href="privacy.html#it">Informativa sulla privacy</a> ·
-  <a href="mailto:gprovenz.dev@gmail.com">gprovenz.dev@gmail.com</a>
-</footer>
+  <section>
+    <div class="wrap">
+      <div class="cards">
+        <article class="card">
+          <h3>Gratuita, senza eccezioni</h3>
+          <p>Nessun acquisto in-app, nessun abbonamento, nessuna funzione riservata a una
+            versione a pagamento. E nessuna pubblicità.</p>
+        </article>
+        <article class="card">
+          <h3>Chiara o scura, a scelta</h3>
+          <p>Tema chiaro, tema scuro oppure quello di sistema, con più combinazioni di colore. Il tema
+            scuro è quello che molti preferiscono durante un attacco, quando la luce dà
+            fastidio.</p>
+        </article>
+        <article class="card">
+          <h3>Cinque lingue</h3>
+          <p>Interfaccia e report in italiano, inglese, francese, spagnolo e tedesco, con il
+            cambio lingua all'interno dell'applicazione.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
 </main>
+
+<footer>
+  <div class="wrap">
+    <p class="disclaimer">Emimate è un diario: registra quello che si scrive e lo restituisce.
+      Non formula diagnosi, non dà consigli medici o terapeutici e non è un dispositivo medico. Per
+      qualsiasi decisione sulla salute rivolgersi al proprio medico.</p>
+    <p>Autore: Gaspare Provenzano. Contatti:
+      <a href="mailto:gprovenz.dev@gmail.com">gprovenz.dev@gmail.com</a></p>
+    <p class="copyright">© 2026 Gaspare Provenzano</p>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -1,0 +1,420 @@
+/*
+ * Emimate promotional site.
+ *
+ * One stylesheet for both languages. No framework and no build step: the page is served as it
+ * is written, and every byte it loads comes from this site. Manrope is self-hosted rather than
+ * pulled from Google Fonts, because a page whose main claim is that nothing leaves the device
+ * cannot hand every visitor's address to a third party to render its own headings.
+ *
+ * Colours are the app's own: the ink is sampled from the wordmark, the accent is the teal the
+ * app uses for actions.
+ */
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('manrope.woff2') format('woff2-variations');
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  --ink: #1f4a69;
+  --text: #26303a;
+  --muted: #5e6b76;
+  --faint: #8b96a0;
+
+  --accent: #0e6b75;
+  --accent-deep: #0b4c54;
+  --accent-tint: #e7f2f3;
+
+  --bg: #faf8f5;
+  --surface: #ffffff;
+  --line: #e5e1da;
+
+  --measure: 62ch;
+  --page: 1080px;
+  --radius: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2rem, 1.35rem + 2.6vw, 3.1rem);
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+}
+
+h3 {
+  font-size: 1.12rem;
+  letter-spacing: -0.005em;
+}
+
+p {
+  margin: 0;
+  max-width: var(--measure);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: from-font;
+}
+
+a:hover {
+  color: var(--accent-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--page);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* Header ------------------------------------------------------------------ */
+
+.masthead {
+  padding-block: 22px;
+}
+
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand img {
+  width: 38px;
+  height: 38px;
+}
+
+.brand span {
+  font-size: 1.42rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.langs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--faint);
+}
+
+.langs a,
+.langs span[aria-current] {
+  padding: 5px 9px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.langs span[aria-current] {
+  background: var(--accent-tint);
+  color: var(--accent-deep);
+}
+
+/* Hero -------------------------------------------------------------------- */
+
+.hero {
+  padding-block: clamp(28px, 4vw, 56px) clamp(40px, 6vw, 78px);
+}
+
+.hero .wrap {
+  display: grid;
+  gap: clamp(32px, 5vw, 64px);
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.hero-copy > * + * {
+  margin-top: 22px;
+}
+
+.lede {
+  font-size: 1.16rem;
+  color: var(--muted);
+}
+
+.claims {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.claims li {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  background: var(--accent-tint);
+  border-radius: 999px;
+  padding: 7px 14px;
+}
+
+.soon {
+  font-size: 0.92rem;
+  color: var(--faint);
+  font-weight: 600;
+}
+
+/* Sections ---------------------------------------------------------------- */
+
+section {
+  padding-block: clamp(38px, 5vw, 62px);
+}
+
+.plain .wrap > * + * {
+  margin-top: 16px;
+}
+
+.feature .wrap {
+  display: grid;
+  gap: clamp(28px, 4.5vw, 60px);
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.feature-copy > * + * {
+  margin-top: 18px;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.points {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: var(--measure);
+}
+
+.points li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--muted);
+}
+
+.points li + li {
+  margin-top: 9px;
+}
+
+.points li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* The phone captures are flat images; the frame belongs to the page, not to the file. */
+.phone {
+  margin: 0;
+  justify-self: center;
+  width: min(280px, 74vw);
+  border: 9px solid #17161d;
+  border-radius: 36px;
+  overflow: hidden;
+  background: #17161d;
+  box-shadow: 0 22px 48px rgba(24, 38, 51, 0.17);
+}
+
+.phone img {
+  border-radius: 27px;
+}
+
+/* Report ------------------------------------------------------------------ */
+
+.report .wrap > * + * {
+  margin-top: 26px;
+}
+
+.report .split {
+  display: grid;
+  gap: clamp(28px, 4.5vw, 60px);
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.report .split > * + * {
+  margin-top: 0;
+}
+
+.report-copy > * + * {
+  margin-top: 18px;
+}
+
+.report figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: 0 14px 34px rgba(24, 38, 51, 0.09);
+}
+
+.report figcaption {
+  font-size: 0.88rem;
+  color: var(--faint);
+  padding: 12px 18px;
+  border-top: 1px solid var(--line);
+}
+
+/* Privacy band ------------------------------------------------------------ */
+
+.band {
+  background: var(--accent-tint);
+  border-block: 1px solid #d3e5e7;
+}
+
+.band .wrap > * + * {
+  margin-top: 18px;
+}
+
+.band p {
+  color: #2b4f53;
+}
+
+/* Cards ------------------------------------------------------------------- */
+
+.cards {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.card h3 {
+  margin-bottom: 9px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-block: 36px 44px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+footer .wrap > * + * {
+  margin-top: 14px;
+}
+
+.disclaimer {
+  max-width: var(--measure);
+  border-left: 3px solid var(--line);
+  padding-left: 16px;
+  color: var(--text);
+}
+
+.copyright {
+  color: var(--faint);
+  font-size: 0.86rem;
+}
+
+/* Two columns once there is room for them -------------------------------- */
+
+@media (min-width: 760px) {
+  .hero .wrap,
+  .feature .wrap {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  /* Alternating sides keep the eye moving down the page. The class is explicit rather than
+   * nth-of-type, which would count every section on the page and flip the wrong ones. */
+  .feature.mirrored .feature-copy {
+    order: 2;
+  }
+
+  .report .split {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

@@ -76,8 +76,18 @@ This repository is the app's public site, served at <https://gprovenz.github.io/
 
 | Page | What it is |
 | --- | --- |
-| `index.html` | The landing page — what the app does, in English and Italian |
+| `index.html` | The landing page, in Italian |
+| `en/index.html` | The same page in English |
 | `privacy.html` | The **privacy policy**, in English and Italian |
+| `assets/` | The stylesheet, the font and the screenshots the two pages share |
+
+The two landing pages are hand-written: no framework, no build step and no JavaScript. They load
+nothing from any other host. Manrope is served from `assets/manrope.woff2`, with its OFL licence
+beside it, rather than from Google Fonts: a page whose claim is that the app sends nothing
+anywhere cannot hand every visitor's address to a third party to set that sentence. `.nojekyll`
+keeps Pages from running the site through Jekyll.
+
+Every path is relative, because the site is served from a subpath rather than a domain root.
 
 Google Play requires a policy at a public URL, and the app's source repository is private, so the
 policy lives here. It is at <https://gprovenz.github.io/emimate-app/privacy.html> — that is the
