@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy · Emimate</title>
+<meta name="description" content="What Emimate stores and where: everything stays on the phone. The app does not request permission to access the internet.">
+<link rel="alternate" hreflang="it" href="../privacy.html">
+<link rel="alternate" hreflang="en" href="privacy.html">
+<link rel="icon" href="../logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img src="../logo.svg" alt="" width="38" height="38">
+      <span>emimate</span>
+    </a>
+    <nav class="langs" aria-label="Language">
+      <a href="../privacy.html" hreflang="it">Italiano</a>
+      <span aria-current="page">English</span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="legal">
+    <div class="wrap">
+      <h1>Privacy policy</h1>
+      <p class="updated">Version 2 · Effective 24 August 2026 · Applies to Emimate for Android,
+    package <code>com.emimate.app</code>, version 1.0.0 and later</p>
+      <p class="lead"><strong>Emimate collects no personal data.</strong> Everything you record stays in
+      the app's private storage on your device. The developer receives nothing, holds nothing, and has
+      no technical means of obtaining it.</p>
+
+      <h2><span class="num">1.</span> Who is responsible for this app</h2>
+      <p>Emimate is published by an independent developer, reachable at
+      <a href="mailto:gprovenz.dev@gmail.com">gprovenz.dev@gmail.com</a>. Because the app transmits
+      nothing and the developer operates no server, no personal data is processed by the developer, and
+      there is no processing on which a lawful basis under the GDPR would need to be claimed. The data
+      in your diary is processed only by you, on your own device, under your own control.</p>
+
+      <h2><span class="num">2.</span> What the app stores, and where</h2>
+      <div class="scroll">
+      <table>
+        <tr><th>Information</th><th>Where it is kept</th><th>What it is for</th></tr>
+        <tr>
+          <td>Your headache diary: start and end of each attack, and the intensity, medication,
+              triggers and notes you choose to add</td>
+          <td>A database inside the app's private storage on the device</td>
+          <td>Showing your diary, the monthly figures and the report</td>
+        </tr>
+        <tr>
+          <td>Your settings: interface language, theme, and the name you want printed on the report</td>
+          <td>The same private storage</td>
+          <td>Keeping the app the way you set it</td>
+        </tr>
+      </table>
+      </div>
+      <p>Diary entries describe your health, which the GDPR treats as a special category of personal
+      data. That is precisely why the app is built so that this information never leaves the device
+      unless you send it somewhere yourself. No other app can read that storage, and neither can the
+      developer. There is no account, no sign-in, and no server.</p>
+
+      <h2><span class="num">3.</span> Why this can be stated rather than merely promised</h2>
+      <p>Emimate does not request the <code>INTERNET</code> permission. Android enforces this: without
+      that permission the operating system will not allow the app to open a network connection at all.
+      It is not a setting that can be changed quietly on an installed app — it is declared in the app's
+      manifest, which anyone can extract from the installed package and read.</p>
+      <p>Android's automatic backup is also switched off (<code>allowBackup="false"</code>), so the
+      system does not copy your diary to Google Drive either.</p>
+      <p>The app contains no advertising network, no analytics library, no crash reporting service and
+      no third-party SDK of any kind. Nobody is told that you opened the app, or when.</p>
+
+      <h2><span class="num">4.</span> Permissions the app requests</h2>
+      <div class="scroll">
+      <table>
+        <tr><th>Permission</th><th>Why</th></tr>
+        <tr>
+          <td><code>POST_NOTIFICATIONS</code></td>
+          <td>To show the notification with the running timer and the End button while an attack is in
+              progress. You can refuse it; the rest of the app works unchanged.</td>
+        </tr>
+        <tr>
+          <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+          <td>To restore that notification and the home screen widget after the phone restarts, so an
+              attack started before the restart is still shown as running.</td>
+        </tr>
+      </table>
+      </div>
+      <p>The app asks for no other permission. It does not request access to storage, contacts,
+      location, the camera or the microphone. Reading and writing your own CSV and PDF files goes
+      through the system file picker, which grants access to the single file you point at.</p>
+
+      <h2><span class="num">5.</span> When data leaves the device, you are the one moving it</h2>
+      <p>Emimate can export your diary as a CSV file and produce a PDF report for your doctor, and can
+      hand either to another app through the Android share sheet. This happens only when you ask for
+      it: you choose the moment, the period covered, where the file is saved and who receives it.</p>
+      <p>Once a file has left the app it is an ordinary document under your control, and this policy no
+      longer governs it. What happens to it afterwards is subject to the terms of whatever app, mail
+      service or storage you chose.</p>
+
+      <h2><span class="num">6.</span> How long data is kept</h2>
+      <p>Your diary stays on the device until you delete it. There is no expiry and no automatic
+      clean-up, because nothing is stored anywhere else and there is nothing for the developer to
+      retain or erase.</p>
+
+      <h2><span class="num">7.</span> Deleting your data</h2>
+      <ul>
+        <li><strong>One attack:</strong> open it in the app and choose <em>Delete</em>.</li>
+        <li><strong>Everything:</strong> uninstall the app. Android deletes its private storage along
+            with it. Because there is no backup and no copy on a server, that erasure is complete and
+            final. The same result is obtained from the Android settings, under
+            <em>Apps → Emimate → Storage → Clear storage</em>, if you want to keep the app installed.</li>
+      </ul>
+      <p>Restoring a backup never deletes anything: it adds the attacks the file contains and rewrites
+      those it describes differently, and leaves the rest untouched. Deletion is always an explicit act.</p>
+
+      <h2><span class="num">8.</span> Your rights</h2>
+      <p>Under the GDPR you have the right of access to your personal data and the rights to
+      rectification, erasure, restriction, objection and portability. Since the developer holds none of
+      your data, these rights are exercised on the device itself and need no request to anyone: your
+      diary is visible in full in the app, editable entry by entry, deletable as described above, and
+      exportable at any moment to a CSV file in a documented, open format that any spreadsheet can
+      read.</p>
+      <p>You also have the right to lodge a complaint with a supervisory authority. In Italy this is the
+      Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it">garanteprivacy.it</a>).</p>
+
+      <h2><span class="num">9.</span> International transfers</h2>
+      <p>None. No data is transmitted, so none is transferred anywhere, inside or outside the European
+      Economic Area.</p>
+
+      <h2><span class="num">10.</span> Children</h2>
+      <p>Emimate is not directed at children and collects nothing from anyone, of any age.</p>
+
+      <h2><span class="num">11.</span> Medical disclaimer</h2>
+      <p>Emimate is a diary. It records what you write and gives it back to you. It does not diagnose,
+      does not give medical advice, and is not a medical device. Decisions about your health belong with
+      your doctor.</p>
+
+      <h2><span class="num">12.</span> Changes to this policy</h2>
+      <p>Any new version is published at this address, with a new version number and date at the top.
+      Since the app collects nothing, a change would concern clarity or a new feature of the app, not
+      new data being gathered. If a future version of the app ever collected or transmitted anything,
+      that change would be described here before it took effect.</p>
+      <div class="note">
+        <p style="margin:0"><strong>Version history.</strong> Version 1, 22 August 2026 — first
+        publication. Version 2, 24 August 2026 — restructured; added the permissions and retention
+        sections, the statement of rights, and the note that restoring a backup never deletes;
+        corrected the description of how the whole diary is erased.</p>
+      </div>
+
+      <h2><span class="num">13.</span> Contact</h2>
+      <p>Questions about this policy:
+      <a href="mailto:gprovenz.dev@gmail.com">gprovenz.dev@gmail.com</a></p>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="./">Back to the site</a></p>
+    <p>Contact: <a href="mailto:gprovenz.dev@gmail.com">gprovenz.dev@gmail.com</a></p>
+    <p class="copyright">© 2026 Gaspare Provenzano</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -78,7 +78,8 @@ This repository is the app's public site, served at <https://gprovenz.github.io/
 | --- | --- |
 | `index.html` | The landing page, in Italian |
 | `en/index.html` | The same page in English |
-| `privacy.html` | The **privacy policy**, in English and Italian |
+| `privacy.html` | The **privacy policy** in Italian |
+| `en/privacy.html` | The privacy policy in English |
 | `assets/` | The stylesheet, the font and the screenshots the two pages share |
 
 The two landing pages are hand-written: no framework, no build step and no JavaScript. They load
@@ -92,6 +93,12 @@ Every path is relative, because the site is served from a subpath rather than a 
 Google Play requires a policy at a public URL, and the app's source repository is private, so the
 policy lives here. It is at <https://gprovenz.github.io/emimate-app/privacy.html> — that is the
 address to give Play, not the site root.
+
+The policy used to be one page carrying both languages, and is now one page per language, laid
+out like the rest of the site. **The address given to Play serves the Italian one**, with English
+a click away in the header, because the site puts Italian at the root and English under `en/`.
+Swapping which language answers that address is a matter of swapping two files, if the listing
+ever wants English there.
 
 The policy states that the app collects nothing and cannot transmit anything. That rests on the
 app not requesting the `INTERNET` permission and on `allowBackup` being off. If either ever
