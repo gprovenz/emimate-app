@@ -311,7 +311,9 @@ section {
 }
 
 .report figure {
-  margin: 0;
+  margin-inline: auto;
+  margin-block: 0;
+  max-width: 720px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -324,6 +326,30 @@ section {
   color: var(--faint);
   padding: 12px 18px;
   border-top: 1px solid var(--line);
+}
+
+/* Colour gallery --------------------------------------------------------- */
+
+.colours .wrap > * + * {
+  margin-top: 18px;
+}
+
+.gallery {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 30px;
+}
+
+/* The frames shrink to the cell: the shared .phone width would overflow four across. */
+.gallery .phone {
+  width: 100%;
+  border-width: 7px;
+  border-radius: 26px;
+}
+
+.gallery .phone img {
+  border-radius: 20px;
 }
 
 /* Privacy band ------------------------------------------------------------ */
@@ -409,7 +435,11 @@ footer .wrap > * + * {
   }
 
   .cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
