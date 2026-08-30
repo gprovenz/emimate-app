@@ -1,0 +1,17 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.emimate.app",
+      "sha256_cert_fingerprints": [
+        "20:BF:5A:7E:51:A4:3F:32:85:C5:E3:E1:F6:D2:56:DE:52:B6:BB:8D:EE:56:80:B7:51:30:5D:F0:F6:95:53:8F",
+        "57:C1:AC:B1:DA:0F:37:CB:37:4A:1E:8D:46:67:ED:C5:CB:25:E6:84:EE:A9:D5:37:43:BA:D3:C5:87:AE:AA:7D",
+        "3A:36:BC:CD:F3:DA:58:42:57:80:F2:20:25:2E:20:A5:B5:48:29:43:A6:8A:8D:9F:81:4C:40:48:36:5C:D7:73"
+      ]
+    }
+  }
+]
