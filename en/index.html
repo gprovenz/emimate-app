@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Emimate · Headache diary for Android</title>
-<meta name="description" content="Emimate is a headache diary for Android: one tap opens the attack, one tap closes it. A PDF report for your doctor, data that stays on the phone, free and with no advertising.">
+<meta name="description" content="Emimate is a headache diary for Android: one tap records the onset of an attack, one tap records its end. A PDF report for your doctor, data held solely on the device, free and free of advertising.">
 <link rel="canonical" href="./">
 <link rel="alternate" hreflang="it" href="../">
 <link rel="alternate" hreflang="en" href="./">
@@ -13,12 +13,26 @@
 <link rel="stylesheet" href="../assets/style.css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Emimate · Headache diary">
-<meta property="og:description" content="One tap opens the attack, one tap closes it. A PDF report for your doctor, data that stays on the phone, free and with no advertising.">
+<meta property="og:description" content="One tap records the onset of an attack, one tap records its end. A PDF report for your doctor, data held solely on the device, free and free of advertising.">
 <meta property="og:image" content="../assets/og.png">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+
+<!-- The static text is the date, not the count: it is what a visitor without JavaScript reads,
+     and it stays correct with no upkeep. The button starts hidden because the Play listing does
+     not exist until the app is published. Both are rewritten by hand once, on release day. -->
+<div class="promo" data-release="2026-09-20"
+     data-soon="Emimate arrives on Google Play in {n} days."
+     data-tomorrow="Emimate arrives on Google Play tomorrow."
+     data-today="Emimate is available on Google Play from today."
+     data-out="Emimate is available on Google Play.">
+  <div class="wrap">
+    <p class="promo-msg">Emimate arrives on Google Play on 20 September 2026.</p>
+    <a class="promo-cta" href="https://play.google.com/store/apps/details?id=com.emimate.app" hidden>Get it on Google Play</a>
+  </div>
+</div>
 
 <header class="masthead">
   <div class="wrap">
@@ -38,17 +52,18 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <h1>The headache diary you fill in with one tap.</h1>
-        <p class="lede">One tap opens the attack, one tap closes it. Everything else is optional:
-          the details go in whenever it suits best, during the attack, right after it or days
-          later.</p>
+        <h1>The headache diary you fill in with a single tap.</h1>
+        <p class="lede">One tap records the onset of an attack, a second tap records its
+          conclusion. Every other detail is optional: the information may be entered whenever it is
+          most convenient, during the attack, at its end or days later.</p>
         <ul class="claims">
           <li>Free</li>
-          <li>No advertising</li>
-          <li>No account</li>
-          <li>Data stays on the phone</li>
+          <li>Free of advertising</li>
+          <li>No registration</li>
+          <li>Data held on the device</li>
         </ul>
-        <p class="soon">Coming soon to Google Play.</p>
+        <p class="soon">Available from 20 September 2026 · <a href="#beta">currently in beta
+          testing</a></p>
       </div>
       <div class="phone">
         <img src="../assets/screens/oggi.webp" width="800" height="1547"
@@ -59,10 +74,11 @@
 
   <section class="plain">
     <div class="wrap">
-      <h2>Why it exists</h2>
-      <p>Emimate comes from someone who lives with headaches. During an attack, filling in a long
-        form is the last thing anyone manages to do, and a diary that asks for too many steps ends
-        up empty. Emimate asks for one gesture, and waits.</p>
+      <h2>How the project began</h2>
+      <p>Emimate was developed by someone who lives with headaches every day. During an attack,
+        completing a detailed form is hardly manageable, and a diary that requires too many steps
+        inevitably remains incomplete. Emimate requires a single action and defers every other
+        entry to a more suitable moment.</p>
     </div>
   </section>
 
@@ -70,18 +86,19 @@
     <div class="wrap">
       <div class="feature-copy">
         <p class="eyebrow">Simplicity</p>
-        <h2>One tap now, the details later</h2>
-        <p>The main screen has a single button: press it when the attack begins and press it again
-          when it has passed. From that moment the attack is recorded, and no field is
+        <h2>An immediate action, the details afterwards</h2>
+        <p>The main screen presents a single button: it is pressed at the onset of the attack and
+          pressed again at its conclusion. The attack is thereby recorded; no further field is
           required.</p>
         <ul class="points">
-          <li>Intensity, where it hurt, symptoms, medications with the number of doses, possible
-            triggers and a free note.</li>
-          <li>They can be filled in during the attack, straight afterwards or days later: the
-            person writing decides, not the app.</li>
-          <li>While the attack is running, a notification shows the timer and the button that
-            closes it. A home screen widget does the same.</li>
-          <li>If an attack is recorded late, the date and time are picked from the calendar.</li>
+          <li>Intensity, pain location, symptoms, medications taken with the corresponding number
+            of doses, possible triggers and a free-form note.</li>
+          <li>The information may be entered during the attack, immediately afterwards or days
+            later: the timing is determined by the user, not by the application.</li>
+          <li>During an attack a notification displays the timer and the command to close it; a
+            home screen widget provides the same function.</li>
+          <li>Where an attack is recorded at a later point, the date and time may be selected from
+            the calendar.</li>
         </ul>
       </div>
       <div class="phone">
@@ -95,11 +112,11 @@
     <div class="wrap">
       <div class="feature-copy">
         <p class="eyebrow">Pain location</p>
-        <h2>Where it hurt, marked on the head</h2>
-        <p>Fifteen areas, front and back. Left and right are the ones of the person marking them,
-          not the screen's. The areas go into the report and the export along with everything
-          else, and the report sums them up on a pair of face diagrams, with the areas shaded darker where the
-          pain came back most.</p>
+        <h2>The pain location, marked on a map of the head</h2>
+        <p>Fifteen areas, front and back. Left and right refer to the user, not to the screen. The
+          selected areas enter the report and the export along with all other data; in the report
+          they are summarised on two representations of the head, where darker areas indicate
+          where the pain recurred most often.</p>
       </div>
       <div class="phone">
         <img src="../assets/screens/sede-dolore.webp" width="800" height="1498"
@@ -112,10 +129,10 @@
     <div class="wrap">
       <div class="feature-copy">
         <p class="eyebrow">History</p>
-        <h2>The month at a glance</h2>
-        <p>Every attack stays recorded with its times, duration and intensity. The calendar shades
-          the days by intensity and sums the month up in three figures: how many attacks, how many
-          hours in total and how long they lasted on average.</p>
+        <h2>A concise view of the month</h2>
+        <p>Every attack is retained with its times, duration and intensity. The calendar shades the
+          days according to the intensity recorded and summarises the month in three figures:
+          number of attacks, total duration and average duration.</p>
       </div>
       <div class="phone">
         <img src="../assets/screens/calendario.webp" width="800" height="1547"
@@ -127,10 +144,10 @@
   <section class="colours">
     <div class="wrap">
       <p class="eyebrow">Themes and colours</p>
-      <h2>The colours are yours to pick</h2>
-      <p>A light theme, a dark theme or the system's own, and several colour scales for
-        intensity. During an attack the dark theme is the one many people prefer, when light is
-        hard to bear.</p>
+      <h2>Configurable themes and colour scales</h2>
+      <p>A light theme, a dark theme or the one set by the system, with several colour scales for
+        intensity. Where light is hard to bear, the dark theme is generally preferable during an
+        attack.</p>
       <div class="gallery">
         <div class="phone"><img src="../assets/screens/chiaro-verderosso.webp" width="640" height="1227" loading="lazy"
           alt="The calendar in the light theme, with the intensity scale running from green to red."></div>
@@ -149,15 +166,16 @@
       <div class="split">
         <div class="report-copy">
           <p class="eyebrow">Report</p>
-          <h2>A document your doctor reads in a minute</h2>
-          <p>The PDF export is not a list of data: it is a laid-out A4 page, with a header,
-            summary figures, a calendar month by month, the pain location and the full table of
-            attacks with times, duration, symptoms, medications, triggers and notes.</p>
+          <h2>A document intended for the medical consultation</h2>
+          <p>The PDF export is not a mere list of data: it is a laid-out A4 document comprising a
+            header, summary figures, a calendar month by month, the pain location and the full
+            table of attacks with times, duration, symptoms, medications, triggers and notes.</p>
           <ul class="points">
-            <li>Choose the period: the last 3, 6 or 12 months, any range you like, or the whole
+            <li>The period is selectable: the last 3, 6 or 12 months, a custom range, or the whole
               diary.</li>
-            <li>The file opens in another app or is shared like any other document.</li>
-            <li>The same data also exports to CSV, for anyone who prefers a spreadsheet.</li>
+            <li>The file may be opened in another application or shared like any other
+              document.</li>
+            <li>The same data may also be exported in CSV format, for use in a spreadsheet.</li>
           </ul>
         </div>
         <div class="phone">
@@ -168,19 +186,19 @@
       <figure>
         <img src="../assets/screens/report.webp" width="926" height="1227" loading="lazy"
              alt="The first page of the PDF report: the header, five summary figures, the pain location on the two face diagrams, the monthly overview and the table of attacks.">
-        <figcaption>The first page of the report, with the summary figures, the pain location, the monthly overview and each attack in turn.</figcaption>
+        <figcaption>The first page of the report: summary figures, pain location, monthly overview and the detail of each attack.</figcaption>
       </figure>
     </div>
   </section>
 
   <section class="band">
     <div class="wrap">
-      <h2>Privacy you can check</h2>
-      <p>Emimate does not request permission to access the internet, and anyone can verify that in
-        the app's permission list. There is no server to send anything to: no cloud, no usage
-        statistics, no automatic backup to online services.</p>
-      <p>The diary stays on the phone. To move to a new phone, export the whole diary to a CSV
-        file and read it back when you need it.</p>
+      <h2>Verifiable privacy</h2>
+      <p>Emimate does not request permission to access the internet, a fact anyone can verify in
+        the app's permission list. There is no server to receive the data: no cloud service, no
+        collection of usage statistics, no automatic backup to online services.</p>
+      <p>The diary is held solely on the device. Should the phone be replaced, the whole diary may
+        be exported to a CSV file and subsequently reimported.</p>
       <p><a href="privacy.html">Privacy policy</a></p>
     </div>
   </section>
@@ -190,14 +208,28 @@
       <div class="cards">
         <article class="card">
           <h3>Free, with no exceptions</h3>
-          <p>No in-app purchases, no subscription, no feature reserved for a paid version. And no
-            advertising.</p>
+          <p>No in-app purchases, no subscription, no feature reserved for a paid version and no
+            advertising of any kind.</p>
         </article>
         <article class="card">
           <h3>Five languages</h3>
-          <p>The interface and the report in Italian, English, French, Spanish and German, with
-            the language switch inside the app.</p>
+          <p>The interface and the report are available in Italian, English, French, Spanish and
+            German, with the language selected inside the app.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Temporary section: the test phase closes when the app is published on Play. -->
+  <section class="beta" id="beta">
+    <div class="wrap">
+      <div class="beta-panel">
+        <p class="eyebrow">Beta testing</p>
+        <h2>The app is in its test phase</h2>
+        <p>Emimate is currently distributed as a trial version to a small group of users, ahead of
+          publication. Anyone wishing to take part, to use the app before its release and to report
+          any problems, may ask to do so by sending an email.</p>
+        <p><a class="beta-cta" href="mailto:gprovenz.dev@gmail.com?subject=Emimate%20-%20beta%20testing">Ask to take part</a></p>
       </div>
     </div>
   </section>
@@ -206,15 +238,18 @@
 
 <footer>
   <div class="wrap">
-    <p class="disclaimer">Emimate is a diary: it records what you write and gives it back. It does
-      not diagnose, it does not give medical or therapeutic advice and it is not a medical device. For any
-      decision about your health, talk to your doctor.</p>
-    <p><a href="privacy.html">Privacy policy</a></p>
+    <p class="disclaimer">Emimate is a diary: it records the information entered by the user and
+      returns it. It does not diagnose, it does not provide medical or therapeutic advice and it
+      does not constitute a medical device. Any decision concerning your health should be taken
+      with your doctor.</p>
+    <p><a href="privacy.html">Privacy policy</a> · <a href="cookie.html">Cookie policy</a></p>
     <p>Author: Gaspare Provenzano. Contact:
       <a href="mailto:gprovenz.dev@gmail.com">gprovenz.dev@gmail.com</a></p>
     <p class="copyright">© 2026 Gaspare Provenzano</p>
   </div>
 </footer>
+
+<script src="../assets/promo.js" defer></script>
 
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Emimate · Diario delle cefalee per Android</title>
-<meta name="description" content="Emimate è un diario delle cefalee per Android: un tocco apre l'attacco, un tocco lo chiude. Report PDF per il medico, dati solo sul telefono, gratuita e senza pubblicità.">
+<meta name="description" content="Emimate è un diario delle cefalee per Android: un tocco registra l'inizio dell'attacco, un tocco ne registra la fine. Report PDF per il medico curante, dati conservati solo sul dispositivo, applicazione gratuita e priva di pubblicità.">
 <link rel="canonical" href="./">
 <link rel="alternate" hreflang="it" href="./">
 <link rel="alternate" hreflang="en" href="en/">
@@ -13,12 +13,27 @@
 <link rel="stylesheet" href="assets/style.css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Emimate · Diario delle cefalee">
-<meta property="og:description" content="Un tocco apre l'attacco, un tocco lo chiude. Report PDF per il medico, dati solo sul telefono, gratuita e senza pubblicità.">
+<meta property="og:description" content="Un tocco registra l'inizio dell'attacco, un tocco ne registra la fine. Report PDF per il medico curante, dati conservati solo sul dispositivo, applicazione gratuita e priva di pubblicità.">
 <meta property="og:image" content="assets/og.png">
 <meta property="og:locale" content="it_IT">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+
+<!-- Il testo statico è la data, non il conteggio: è quello che legge chi ha JavaScript
+     disattivato, e resta corretto senza aggiornamenti. Il pulsante nasce nascosto perché la
+     scheda su Play non esiste finché l'app non è pubblicata. Dal giorno del rilascio entrambi
+     vanno riscritti a mano una volta. -->
+<div class="promo" data-release="2026-09-20"
+     data-soon="Emimate arriva su Google Play tra {n} giorni."
+     data-tomorrow="Emimate arriva su Google Play domani."
+     data-today="Emimate è disponibile da oggi su Google Play."
+     data-out="Emimate è disponibile su Google Play.">
+  <div class="wrap">
+    <p class="promo-msg">Emimate arriva su Google Play il 20 settembre 2026.</p>
+    <a class="promo-cta" href="https://play.google.com/store/apps/details?id=com.emimate.app" hidden>Scarica su Google Play</a>
+  </div>
+</div>
 
 <header class="masthead">
   <div class="wrap">
@@ -38,17 +53,19 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <h1>Il diario delle cefalee che si compila con un tocco.</h1>
-        <p class="lede">Un tocco apre l'attacco, un tocco lo chiude. Tutto il resto è
-          facoltativo: i dettagli si aggiungono quando è più conveniente
-          farlo, durante l'attacco, appena terminato oppure a distanza di giorni.</p>
+        <h1>Il diario delle cefalee che si compila con un solo tocco.</h1>
+        <p class="lede">Un tocco registra l'inizio dell'attacco, un secondo tocco ne registra la
+          conclusione. Ogni altra informazione è facoltativa: i dettagli possono essere inseriti
+          nel momento ritenuto più opportuno, durante l'attacco, al suo termine oppure a distanza
+          di giorni.</p>
         <ul class="claims">
           <li>Gratuita</li>
-          <li>Senza pubblicità</li>
-          <li>Senza account</li>
-          <li>I dati restano sul telefono</li>
+          <li>Priva di pubblicità</li>
+          <li>Senza registrazione</li>
+          <li>Dati conservati sul dispositivo</li>
         </ul>
-        <p class="soon">Presto su Google Play.</p>
+        <p class="soon">Disponibile dal 20 settembre 2026 · <a href="#beta">attualmente in beta
+          testing</a></p>
       </div>
       <div class="phone">
         <img src="assets/screens/oggi.webp" width="800" height="1547"
@@ -59,10 +76,11 @@
 
   <section class="plain">
     <div class="wrap">
-      <h2>Perché esiste</h2>
-      <p>Emimate nasce da chi convive con la cefalea. Durante un attacco
-        compilare un modulo lungo è l'ultima cosa che si riesce a fare, e un diario che chiede
-        troppi passaggi finisce per restare vuoto. Emimate chiede un gesto solo, e aspetta.</p>
+      <h2>Origine del progetto</h2>
+      <p>Emimate è stata sviluppata da chi convive quotidianamente con la cefalea. Durante un
+        attacco la compilazione di un modulo articolato risulta difficilmente sostenibile, e un
+        diario che richiede troppi passaggi rimane inevitabilmente incompleto. Emimate richiede
+        un'unica azione e rimanda ogni altro inserimento al momento più opportuno.</p>
     </div>
   </section>
 
@@ -70,18 +88,19 @@
     <div class="wrap">
       <div class="feature-copy">
         <p class="eyebrow">Semplicità</p>
-        <h2>Un gesto adesso, i dettagli con calma</h2>
-        <p>La schermata principale ha un solo pulsante: si preme quando l'attacco comincia e si
-          preme di nuovo quando è passato. Da quel momento l'attacco è registrato, e nessun campo
-          è obbligatorio.</p>
+        <h2>Un'azione immediata, i dettagli in un secondo momento</h2>
+        <p>La schermata principale presenta un unico pulsante: viene premuto all'insorgere
+          dell'attacco e premuto nuovamente alla sua conclusione. L'attacco risulta così
+          registrato; nessun ulteriore campo è obbligatorio.</p>
         <ul class="points">
-          <li>Intensità, sede del dolore, sintomi, farmaci con il numero di dosi, possibili
-            trigger e una nota libera.</li>
-          <li>Si compilano durante l'attacco, subito dopo oppure a distanza di giorni: decide chi
-            scrive, non l'applicazione.</li>
-          <li>Mentre l'attacco è in corso, una notifica mostra il cronometro e il pulsante per
-            chiuderlo. Un widget sulla schermata Home fa lo stesso.</li>
-          <li>Se l'attacco viene registrato in ritardo, data e ora si scelgono dal calendario.</li>
+          <li>Intensità, sede del dolore, sintomi, farmaci assunti con il relativo numero di dosi,
+            possibili fattori scatenanti e una nota in formato libero.</li>
+          <li>I dati possono essere inseriti durante l'attacco, immediatamente dopo oppure a
+            distanza di giorni: la tempistica è stabilita dall'utente, non dall'applicazione.</li>
+          <li>Durante l'attacco una notifica riporta il cronometro e il comando di chiusura; un
+            widget sulla schermata Home offre la stessa funzione.</li>
+          <li>Qualora l'attacco venga registrato in un momento successivo, data e ora possono
+            essere selezionate dal calendario.</li>
         </ul>
       </div>
       <div class="phone">
@@ -95,11 +114,12 @@
     <div class="wrap">
       <div class="feature-copy">
         <p class="eyebrow">Sede del dolore</p>
-        <h2>Dove fa male, indicato sulla testa</h2>
-        <p>Quindici aree, davanti e dietro. Destra e sinistra sono quelle di chi compila, non
-          quelle dello schermo. Le aree entrano nel report e nell'esportazione insieme a tutto
-          il resto, e nel report sono riassunte su due miniature del volto, con le zone più scure dove il
-          dolore è tornato più spesso.</p>
+        <h2>La sede del dolore, indicata sulla mappa del capo</h2>
+        <p>Quindici aree, in visione anteriore e posteriore. I riferimenti destra e sinistra
+          corrispondono a quelli dell'utente, non a quelli dello schermo. Le aree selezionate
+          confluiscono nel report e nell'esportazione insieme a tutti gli altri dati; nel report
+          sono riepilogate su due rappresentazioni del capo, in cui le zone più scure indicano una
+          maggiore ricorrenza del dolore.</p>
       </div>
       <div class="phone">
         <img src="assets/screens/sede-dolore.webp" width="800" height="1498"
@@ -112,10 +132,10 @@
     <div class="wrap">
       <div class="feature-copy">
         <p class="eyebrow">Storico</p>
-        <h2>Il mese si legge a colpo d'occhio</h2>
-        <p>Ogni attacco resta registrato con orari, durata e intensità. Il calendario colora i
-          giorni secondo l'intensità e riassume il mese in tre numeri: quanti attacchi, quante ore
-          in tutto e quanto sono durati in media.</p>
+        <h2>Una lettura sintetica dell'andamento mensile</h2>
+        <p>Ogni attacco viene conservato con orari, durata e intensità. Il calendario evidenzia i
+          giorni in base all'intensità registrata e riepiloga il mese in tre indicatori: numero di
+          attacchi, durata complessiva e durata media.</p>
       </div>
       <div class="phone">
         <img src="assets/screens/calendario.webp" width="800" height="1547"
@@ -127,10 +147,10 @@
   <section class="colours">
     <div class="wrap">
       <p class="eyebrow">Temi e colori</p>
-      <h2>I colori li scegli tu</h2>
-      <p>Tema chiaro, tema scuro oppure quello di sistema, e più scale di colore per l'intensità.
-        Durante un attacco il tema scuro è quello che molti preferiscono, quando la luce dà
-        fastidio.</p>
+      <h2>Temi e scale cromatiche configurabili</h2>
+      <p>Tema chiaro, tema scuro o quello impostato dal sistema, con diverse scale cromatiche per
+        l'intensità. In presenza di fotofobia il tema scuro risulta generalmente preferibile
+        durante l'attacco.</p>
       <div class="gallery">
         <div class="phone"><img src="assets/screens/chiaro-verderosso.webp" width="640" height="1227" loading="lazy"
           alt="Il calendario in tema chiaro, con la scala di intensità dal verde al rosso."></div>
@@ -149,17 +169,18 @@
       <div class="split">
         <div class="report-copy">
           <p class="eyebrow">Report</p>
-          <h2>Un documento che il medico legge in un minuto</h2>
-          <p>L'esportazione in PDF non è un elenco di dati: è una pagina A4 impaginata, con intestazione,
-            numeri di sintesi, calendario mese per mese, sede del dolore e la tabella completa
-            degli attacchi con orari, durata, sintomi, farmaci, trigger e note.</p>
+          <h2>Un documento pensato per il consulto medico</h2>
+          <p>L'esportazione in PDF non consiste in un semplice elenco di dati: è un documento in
+            formato A4 impaginato, comprensivo di intestazione, indicatori di sintesi, calendario
+            mese per mese, sede del dolore e tabella completa degli attacchi con orari, durata,
+            sintomi, farmaci, fattori scatenanti e note.</p>
           <ul class="points">
-            <li>Il periodo si sceglie: ultimi 3, 6 o 12 mesi, un intervallo a piacere oppure
-              l'intero diario.</li>
-            <li>Il file si apre con un'altra applicazione o si condivide come qualsiasi altro
-              documento.</li>
-            <li>Gli stessi dati si esportano anche in CSV, per chi preferisce un foglio di
-              calcolo.</li>
+            <li>Il periodo è selezionabile: ultimi 3, 6 o 12 mesi, un intervallo personalizzato
+              oppure l'intero diario.</li>
+            <li>Il file può essere aperto con un'altra applicazione o condiviso come qualsiasi
+              altro documento.</li>
+            <li>I medesimi dati sono esportabili anche in formato CSV, per l'elaborazione in un
+              foglio di calcolo.</li>
           </ul>
         </div>
         <div class="phone">
@@ -170,20 +191,22 @@
       <figure>
         <img src="assets/screens/report.webp" width="926" height="1227" loading="lazy"
              alt="La prima pagina del report PDF: intestazione, cinque numeri di sintesi, la sede del dolore sulle due miniature del volto, la panoramica mensile e la tabella degli attacchi.">
-        <figcaption>La prima pagina del report, con i numeri di sintesi, la sede del dolore, la panoramica mensile e il dettaglio degli attacchi.</figcaption>
+        <figcaption>Prima pagina del report: indicatori di sintesi, sede del dolore, panoramica mensile e dettaglio degli attacchi.</figcaption>
       </figure>
     </div>
   </section>
 
   <section class="band">
     <div class="wrap">
-      <h2>Una privacy verificabile e garantita</h2>
-      <p>Emimate non richiede il permesso di accedere a Internet, e chiunque può controllarlo
-        nell'elenco dei permessi dell'applicazione. Non esiste un server a cui inviare qualcosa:
-        nessun cloud, nessuna statistica d'uso, nessun backup automatico verso servizi online.</p>
-      <p>Il diario resta sul telefono. Per il cambio telefono si esporta l'intero diario in un
-        file CSV e lo si rilegge quando serve.</p>
-      <p><a href="privacy.html">Privacy policy</a></p>
+      <h2>Una privacy verificabile</h2>
+      <p>Emimate non richiede il permesso di accesso a Internet, circostanza verificabile da
+        chiunque nell'elenco dei permessi dell'applicazione. Non esiste alcun server destinatario
+        dei dati: nessun servizio cloud, nessuna raccolta di statistiche d'uso, nessun backup
+        automatico verso servizi online.</p>
+      <p>Il diario è conservato esclusivamente sul dispositivo. In caso di sostituzione del
+        telefono, l'intero diario può essere esportato in un file CSV e successivamente
+        reimportato.</p>
+      <p><a href="privacy.html">Informativa sulla privacy</a></p>
     </div>
   </section>
 
@@ -193,13 +216,28 @@
         <article class="card">
           <h3>Gratuita, senza eccezioni</h3>
           <p>Nessun acquisto in-app, nessun abbonamento, nessuna funzione riservata a una
-            versione a pagamento. E nessuna pubblicità.</p>
+            versione a pagamento e nessuna forma di pubblicità.</p>
         </article>
         <article class="card">
           <h3>Cinque lingue</h3>
-          <p>Interfaccia e report in italiano, inglese, francese, spagnolo e tedesco, con il
-            cambio lingua all'interno dell'applicazione.</p>
+          <p>Interfaccia e report disponibili in italiano, inglese, francese, spagnolo e tedesco,
+            con selezione della lingua all'interno dell'applicazione.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione temporanea: la fase di test si chiude con la pubblicazione su Play. -->
+  <section class="beta" id="beta">
+    <div class="wrap">
+      <div class="beta-panel">
+        <p class="eyebrow">Beta testing</p>
+        <h2>L'applicazione è in fase di test</h2>
+        <p>Emimate è attualmente distribuita in versione di prova a un gruppo ristretto di
+          utilizzatori, in vista della pubblicazione. Chi desidera parteciparvi, utilizzare
+          l'applicazione prima del rilascio e segnalare eventuali anomalie può richiederlo
+          scrivendo un messaggio di posta elettronica.</p>
+        <p><a class="beta-cta" href="mailto:gprovenz.dev@gmail.com?subject=Emimate%20-%20beta%20testing">Richiedi di partecipare</a></p>
       </div>
     </div>
   </section>
@@ -208,15 +246,18 @@
 
 <footer>
   <div class="wrap">
-    <p class="disclaimer">Emimate è un diario: registra quello che si scrive e lo restituisce.
-      Non formula diagnosi, non dà consigli medici o terapeutici e non è un dispositivo medico. Per
-      qualsiasi decisione sulla salute rivolgersi al proprio medico.</p>
-    <p><a href="privacy.html">Informativa sulla privacy</a></p>
+    <p class="disclaimer">Emimate è un diario: registra le informazioni inserite dall'utente e le
+      restituisce. Non formula diagnosi, non fornisce consigli medici o terapeutici e non
+      costituisce un dispositivo medico. Per qualsiasi decisione in ambito sanitario è necessario
+      rivolgersi al proprio medico.</p>
+    <p><a href="privacy.html">Informativa sulla privacy</a> · <a href="cookie.html">Cookie policy</a></p>
     <p>Autore: Gaspare Provenzano. Contatti:
       <a href="mailto:gprovenz.dev@gmail.com">gprovenz.dev@gmail.com</a></p>
     <p class="copyright">© 2026 Gaspare Provenzano</p>
   </div>
 </footer>
+
+<script src="assets/promo.js" defer></script>
 
 </body>
 </html>

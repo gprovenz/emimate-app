@@ -1,105 +1,28 @@
 # Emimate
 
-A headache diary that stays out of your way. One tap to open an attack, one tap to close it —
-everything else is optional.
+A headache diary for Android. One tap opens an attack, one tap closes it.
 
-> **Coming to Google Play.** Once published the app will be at
-> <https://play.google.com/store/apps/details?id=com.emimate.app>
+**<https://emimate.it>**
 
 ---
 
-## English
+This repository is the app's public site. The app's own source lives elsewhere and is private.
 
-When an attack starts, filling in a form is the last thing you want to do. Emimate asks for one
-tap to open it and one tap to close it. Intensity, medication, triggers and notes are optional,
-and you add them afterwards if you feel like it.
-
-**One tap, literally.** One big button in the middle of the screen. While an attack is running a
-notification shows the timer and an End button, so you never have to open the app, and a home
-screen widget does the same from your home screen. Noticed late? Pick the date and time from the
-calendar instead.
-
-**A report your doctor will actually read.** The PDF export is an A4 document with a header, five
-summary numbers, a month-by-month calendar with days shaded by intensity, and the full table of
-attacks. The intensity scale uses one hue in four steps, so it still reads when photocopied in
-black and white.
-
-**Your data stays yours.** Emimate does not even ask for permission to use the internet — Android
-enforces that, so it is a property of the app rather than a promise. No account, no ads, no
-analytics, no automatic backup to Drive.
-
-**Take your data with you.** Back up the whole diary to a CSV file you place yourself, and restore
-it later. Share a report or a spreadsheet for any period you choose.
-
-**Five languages** — English, Italian, French, Spanish and German — interface and report, switchable inside the app.
-
-Emimate is a diary. It records what you tell it and prints it back out. It does not diagnose,
-does not give medical advice, and is not a medical device. Decisions about your health belong
-with your doctor.
-
----
-
-## Italiano
-
-Quando arriva un attacco non hai voglia di compilare moduli. Emimate ti chiede un tap per aprirlo
-e un tap per chiuderlo. Intensità, farmaci, trigger e note sono facoltativi, e li aggiungi dopo,
-con calma, se ti va.
-
-**Un tap, davvero.** Un bottone grande in mezzo alla schermata. Mentre l'attacco è in corso una
-notifica mostra il timer e il tasto Termina, quindi non devi nemmeno aprire l'app, e un widget
-fa lo stesso dalla schermata home. Te ne sei accorto in ritardo? Scegli data e ora dal calendario.
-
-**Il report che il medico legge volentieri.** L'export PDF è un documento in A4 con
-l'intestazione, cinque numeri di sintesi, il calendario mese per mese con i giorni colorati per
-intensità e la tabella completa degli attacchi. La scala di intensità usa una sola tinta in
-quattro gradini, quindi resta leggibile anche fotocopiata in bianco e nero.
-
-**I tuoi dati restano tuoi.** Emimate non chiede nemmeno il permesso di accedere a internet — è
-Android a farlo rispettare, quindi è una proprietà dell'app, non una promessa. Nessun account,
-nessuna pubblicità, nessun analytics, nessun backup automatico su Drive.
-
-**I dati li porti via quando vuoi.** Fai il backup dell'intero diario in un file CSV che collochi
-tu, e lo ripristini quando serve. Condividi un report o un foglio di calcolo per il periodo che
-scegli.
-
-**Cinque lingue** — italiano, inglese, francese, spagnolo e tedesco — interfaccia e report, con il cambio lingua dentro l'app.
-
-Emimate è un diario: registra quello che gli dici e te lo ristampa. Non diagnostica, non dà
-consigli medici e non è un dispositivo medico. Le decisioni sulla tua salute spettano al tuo
-medico.
-
----
-
-## About this repository
-
-This repository is the app's public site, served at <https://gprovenz.github.io/emimate-app/>:
-
-| Page | What it is |
+| Page | |
 | --- | --- |
-| `index.html` | The landing page, in Italian |
-| `en/index.html` | The same page in English |
-| `privacy.html` | The **privacy policy** in Italian |
-| `en/privacy.html` | The privacy policy in English |
-| `assets/` | The stylesheet, the font and the screenshots the two pages share |
+| `index.html` · `en/index.html` | The landing page, Italian and English |
+| `privacy.html` · `en/privacy.html` | Privacy policy — covers the **app** |
+| `cookie.html` · `en/cookie.html` | Cookie policy — covers the **site** |
+| `assets/` | Stylesheet, font, countdown script, screenshots |
 
-The two landing pages are hand-written: no framework, no build step and no JavaScript. They load
-nothing from any other host. Manrope is served from `assets/manrope.woff2`, with its OFL licence
-beside it, rather than from Google Fonts: a page whose claim is that the app sends nothing
-anywhere cannot hand every visitor's address to a third party to set that sentence. `.nojekyll`
-keeps Pages from running the site through Jekyll.
+Hand-written: no framework, no build step, one script. Nothing loads from another host — the font
+is self-hosted rather than pulled from Google Fonts, because a site whose claim is that the app
+sends nothing anywhere cannot hand every visitor's address to a third party to set that sentence.
+Every path is relative. `.nojekyll` keeps Pages from running the site through Jekyll.
 
-Every path is relative, because the site is served from a subpath rather than a domain root.
+Google Play needs a policy at a public URL: give it <https://emimate.it/privacy.html>, not the site
+root. (The older `gprovenz.github.io/emimate-app/` address still redirects here.) That page states
+the app collects nothing and cannot transmit anything, which rests on the app not requesting the
+`INTERNET` permission and on `allowBackup` being off. If either changes, that page changes too.
 
-Google Play requires a policy at a public URL, and the app's source repository is private, so the
-policy lives here. It is at <https://gprovenz.github.io/emimate-app/privacy.html> — that is the
-address to give Play, not the site root.
-
-The policy used to be one page carrying both languages, and is now one page per language, laid
-out like the rest of the site. **The address given to Play serves the Italian one**, with English
-a click away in the header, because the site puts Italian at the root and English under `en/`.
-Swapping which language answers that address is a matter of swapping two files, if the listing
-ever wants English there.
-
-The policy states that the app collects nothing and cannot transmit anything. That rests on the
-app not requesting the `INTERNET` permission and on `allowBackup` being off. If either ever
-changes, this page has to change with it.
+Working on this repo: see `CLAUDE.md`.
