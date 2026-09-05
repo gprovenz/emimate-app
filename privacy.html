@@ -29,12 +29,19 @@
   <article class="legal">
     <div class="wrap">
       <h1>Informativa sulla privacy</h1>
-      <p class="updated">Versione 1 · In vigore dal 1º settembre 2026 · Si applica a Emimate per
-Android, pacchetto <code>com.emimate.app</code>, versione 1.0.0 e successive</p>
+      <p class="updated">Versione 2 · In vigore dal 5 settembre 2026 · Si applica a Emimate per
+Android, pacchetto <code>com.emimate.app</code>, versione 1.5.0 e successive</p>
       <p class="lead"><strong>Emimate non raccoglie alcun dato personale.</strong> Tutte le
       informazioni registrate dall'utente rimangono nell'archivio privato dell'applicazione, sul
       dispositivo. Lo sviluppatore non riceve né conserva alcun dato e non dispone di alcun mezzo
       tecnico per ottenerlo.</p>
+      <p class="lead">Una sola copia esce dal dispositivo, ed è il sistema operativo a prelevarla,
+      non l'applicazione: se la <strong>copia di sicurezza</strong> è attiva, Android conserva il
+      diario nel Google Drive dell'utente, affinché la perdita o la sostituzione del telefono non
+      comporti la perdita del diario. La copia rimane nell'account dell'utente, cui soltanto egli
+      accede; lo sviluppatore non la riceve e non ne ha conoscenza. La funzione è attiva per
+      impostazione predefinita e si disattiva dalle impostazioni dell'applicazione. Il punto 5 ne
+      dà conto per esteso.</p>
 
       <h2><span class="num">1.</span> Titolare e ambito di applicazione</h2>
       <p>Emimate è pubblicata da uno sviluppatore indipendente, contattabile all'indirizzo
@@ -65,14 +72,23 @@ Android, pacchetto <code>com.emimate.app</code>, versione 1.0.0 e successive</p>
           <td>Il medesimo archivio privato</td>
           <td>Conservare la configurazione scelta dall'utente</td>
         </tr>
+        <tr>
+          <td>La copia di sicurezza: il diario e le impostazioni, scritti dall'applicazione in due
+              file in formato CSV</td>
+          <td>Nel medesimo archivio privato e, se la funzione è attiva, nel Google Drive
+              dell'utente, ove è Android a depositarla</td>
+          <td>Consentire di ritrovare il diario su un nuovo dispositivo</td>
+        </tr>
       </table>
       </div>
       <p>Le voci del diario descrivono lo stato di salute dell'utente, che il Regolamento (UE)
       2016/679 qualifica come categoria particolare di dati personali. È precisamente per tale
-      ragione che l'applicazione è progettata in modo che dette informazioni non lascino mai il
-      dispositivo, salvo che sia l'utente stesso a disporne il trasferimento. Nessuna altra
+      ragione che l'applicazione è progettata in modo da non trasmettere di propria iniziativa
+      alcuna informazione. Le sole due ipotesi in cui il diario lascia il dispositivo sono la copia
+      di sicurezza di Android e l'esportazione di un file: la prima è disattivabile, la seconda
+      presuppone un atto dell'utente. Di entrambe si dà conto al punto 5. Nessuna altra
       applicazione è in grado di accedere a tale archivio, né vi può accedere lo sviluppatore. Non è
-      previsto alcun account, alcuna procedura di accesso e alcun server.</p>
+      previsto alcun account, alcuna procedura di accesso e alcun server dello sviluppatore.</p>
 
       <h2><span class="num">3.</span> Fondamento tecnico delle affermazioni precedenti</h2>
       <p>Emimate non richiede il permesso <code>INTERNET</code>. Android ne assicura il rispetto: in
@@ -80,8 +96,12 @@ Android, pacchetto <code>com.emimate.app</code>, versione 1.0.0 e successive</p>
       connessione di rete. Non si tratta di un'impostazione modificabile in modo silente ad
       applicazione installata, bensì di una dichiarazione contenuta nel manifest, che chiunque può
       estrarre dal pacchetto installato e verificare.</p>
-      <p>È inoltre disattivato il backup automatico di Android (<code>allowBackup="false"</code>):
-      il sistema non copia pertanto il diario su Google Drive.</p>
+      <p>Il backup automatico di Android è attivo (<code>allowBackup="true"</code>). Si tratta di
+      una funzione del sistema operativo e non dell'applicazione, la quale, priva del permesso
+      <code>INTERNET</code>, non potrebbe in alcun modo trasmettere il file da sé. Quanto viene
+      copiato è dichiarato nel manifest, in <code>backup_rules.xml</code> e
+      <code>data_extraction_rules.xml</code>, ed è verificabile del pari: i soli due file in
+      formato CSV che l'applicazione redige a tale scopo, e non il database.</p>
       <p>L'applicazione non integra alcun circuito pubblicitario, alcuna libreria di analytics,
       alcun servizio di segnalazione degli errori e alcun SDK di terze parti. Nessun soggetto viene
       informato dell'apertura dell'applicazione né del momento in cui questa avviene.</p>
@@ -109,6 +129,33 @@ Android, pacchetto <code>com.emimate.app</code>, versione 1.0.0 e successive</p>
       concede l'accesso al singolo file indicato dall'utente.</p>
 
       <h2><span class="num">5.</span> Trasferimenti disposti dall'utente</h2>
+      <p>Il diario lascia il dispositivo in due sole ipotesi, entrambe rimesse alla determinazione
+      dell'utente.</p>
+
+      <h3>a) La copia di sicurezza nel Google Drive dell'utente</h3>
+      <p>Ove la funzione sia attiva, Android preleva periodicamente due file in formato CSV — il
+      diario e le impostazioni — e li deposita nello spazio riservato all'applicazione all'interno
+      del Google Drive associato all'account dell'utente. L'operazione è compiuta dal sistema
+      operativo, in un momento da esso determinato, quando il dispositivo è inattivo, in carica e
+      connesso a una rete Wi-Fi; l'applicazione non vi prende parte e, non disponendo del permesso
+      <code>INTERNET</code>, non sarebbe in grado di compierla.</p>
+      <p>La copia è protetta dalle credenziali dell'account Google dell'utente e, sui dispositivi
+      con Android 9 e successivi, è cifrata end-to-end mediante il codice di sblocco del
+      dispositivo, cosicché nemmeno Google è in grado di leggerne il contenuto. Lo sviluppatore non
+      vi accede, non ne riceve notizia e non dispone di alcun mezzo tecnico per ottenerla. Il
+      trattamento della copia da parte di Google è regolato dalle condizioni e dall'informativa
+      privacy di Google, cui l'utente aderisce in ragione dell'account di cui dispone.</p>
+      <p>La funzione è attiva per impostazione predefinita, giacché la perdita del telefono è
+      l'evento che con maggiore frequenza comporta la perdita del diario. Si disattiva in
+      <em>Impostazioni → Copia di sicurezza</em>, ove è altresì indicata la data dell'ultima copia
+      e la frequenza con la quale se ne consente il prelievo. Disattivandola, l'applicazione cessa
+      di aggiornare i due file e Android non ha più nulla da prelevare.</p>
+      <p>La copia ritorna all'atto dell'installazione dell'applicazione su un nuovo dispositivo.
+      In tale occasione l'applicazione domanda se ripristinare il diario, indicando la data della
+      copia e il numero di attacchi che contiene; in caso di risposta negativa la copia è
+      eliminata, e non è pertanto reintrodotta nel diario né conservata nel dispositivo.</p>
+
+      <h3>b) L'esportazione di un file</h3>
       <p>Emimate consente di esportare il diario in formato CSV e di produrre un report in formato
       PDF destinato al medico, nonché di trasmettere l'uno o l'altro a un'altra applicazione
       mediante la funzione di condivisione di Android. Ciò avviene esclusivamente su richiesta
@@ -121,19 +168,32 @@ Android, pacchetto <code>com.emimate.app</code>, versione 1.0.0 e successive</p>
 
       <h2><span class="num">6.</span> Periodo di conservazione</h2>
       <p>Il diario permane sul dispositivo fino alla sua eliminazione da parte dell'utente. Non è
-      previsto alcun termine di scadenza né alcuna cancellazione automatica, non essendo conservata
-      alcuna informazione altrove e non sussistendo alcun dato che lo sviluppatore debba trattenere
-      o eliminare.</p>
+      previsto alcun termine di scadenza né alcuna cancellazione automatica, non sussistendo alcun
+      dato che lo sviluppatore debba trattenere o eliminare.</p>
+      <p>Ove la copia di sicurezza sia attiva, la copia depositata nel Google Drive dell'utente
+      permane per il tempo stabilito dalle condizioni di Google, ed è da queste disciplinata. Google
+      rimuove la copia trascorso un periodo di inattività dell'applicazione, ovvero
+      a seguito della sua disinstallazione dal dispositivo.</p>
 
       <h2><span class="num">7.</span> Cancellazione dei dati</h2>
       <ul>
         <li><strong>Singolo attacco:</strong> aprirlo nell'applicazione e selezionare
             <em>Elimina</em>.</li>
-        <li><strong>Intero diario:</strong> disinstallare l'applicazione. Android ne rimuove
-            contestualmente l'archivio privato. In assenza di backup e di copie su server, la
-            cancellazione è integrale e definitiva. Il medesimo risultato si ottiene dalle
-            impostazioni di Android, in <em>App → Emimate → Spazio di archiviazione → Cancella
-            dati</em>, qualora si intenda mantenere l'applicazione installata.</li>
+        <li><strong>Intero diario:</strong> dalle impostazioni dell'applicazione, in
+            <em>Elimina → Elimina tutti i dati</em>. L'operazione è irreversibile e ne è data
+            avvertenza. Una casella, non selezionata per impostazione predefinita, consente di
+            estendere l'eliminazione alla copia di sicurezza; selezionandola è richiesta una
+            seconda conferma, giacché tale metà dell'operazione non ammette rimedio alcuno.</li>
+        <li><strong>Disinstallazione:</strong> Android rimuove contestualmente l'archivio privato
+            dell'applicazione. Il medesimo risultato si ottiene, mantenendo l'applicazione
+            installata, dalle impostazioni di Android in <em>App → Emimate → Spazio di
+            archiviazione → Cancella dati</em>.</li>
+        <li><strong>La copia depositata nel Google Drive:</strong> nessuna applicazione dispone del
+            potere di rimuoverla direttamente, e Emimate non fa eccezione. Eliminando la copia di
+            sicurezza dalle impostazioni, l'applicazione svuota i propri file, e Android sostituisce
+            con essi la copia presente nel Drive in occasione del successivo prelievo. La copia è
+            del pari rimossa da Google a seguito della disinstallazione dell'applicazione, ovvero
+            per il tramite delle impostazioni dell'account Google dell'utente.</li>
       </ul>
       <p>Il ripristino di un backup non comporta in alcun caso una cancellazione: aggiunge gli
       attacchi contenuti nel file, aggiorna quelli che il file descrive diversamente e lascia
@@ -153,8 +213,16 @@ Android, pacchetto <code>com.emimate.app</code>, versione 1.0.0 e successive</p>
       (<a href="https://www.garanteprivacy.it">garanteprivacy.it</a>).</p>
 
       <h2><span class="num">9.</span> Trasferimenti verso Paesi terzi</h2>
-      <p>Non ne ha luogo alcuno. Non essendo trasmesso alcun dato, non si verifica alcun
-      trasferimento, né all'interno né all'esterno dello Spazio economico europeo.</p>
+      <p>Lo sviluppatore non dà luogo ad alcun trasferimento, né all'interno né all'esterno dello
+      Spazio economico europeo, non ricevendo alcun dato.</p>
+      <p>Ove la copia di sicurezza sia attiva, il deposito della copia nel Google Drive dell'utente
+      è compiuto da Google, la quale può conservarla su propri server situati anche fuori dallo
+      Spazio economico europeo. Tale trasferimento intercorre fra l'utente e Google, in forza del
+      rapporto già esistente fra i medesimi in ragione dell'account, ed è disciplinato
+      dall'informativa privacy di Google. Sui dispositivi con Android 9 e successivi la copia è
+      cifrata end-to-end mediante il codice di sblocco del dispositivo, sicché il contenuto non è
+      leggibile da Google. Chi intenda evitare del tutto tale trasferimento disattiva la copia di
+      sicurezza dalle impostazioni dell'applicazione.</p>
 
       <h2><span class="num">10.</span> Minori</h2>
       <p>Emimate non si rivolge ai minori e non raccoglie alcuna informazione da alcun utente, a
@@ -167,11 +235,10 @@ Android, pacchetto <code>com.emimate.app</code>, versione 1.0.0 e successive</p>
 
       <h2><span class="num">12.</span> Modifiche all'informativa</h2>
       <p>Ogni nuova versione è pubblicata al presente indirizzo, con un nuovo numero di versione e
-      una nuova data in apertura. Poiché l'applicazione non raccoglie alcun dato, un'eventuale
-      modifica atterrebbe alla chiarezza espositiva o a una nuova funzione dell'applicazione, non
-      all'introduzione di nuovi dati raccolti. Qualora una futura versione dell'applicazione
-      dovesse raccogliere o trasmettere informazioni, la modifica sarebbe descritta in questa sede
-      prima della sua entrata in vigore.</p>
+      una nuova data in apertura. La versione 2 della presente informativa dà conto della copia di
+      sicurezza di Android, introdotta con la versione 1.5.0 dell'applicazione. Qualora una futura
+      versione dell'applicazione dovesse raccogliere o trasmettere informazioni ulteriori, la
+      modifica sarebbe descritta in questa sede prima della sua entrata in vigore.</p>
 
       <h2><span class="num">13.</span> Contatti</h2>
       <p>Richieste di chiarimento sulla presente informativa:

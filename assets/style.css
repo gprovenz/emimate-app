@@ -446,6 +446,13 @@ section {
   margin-right: 8px;
 }
 
+/* The lettered parts inside a numbered section. Every heading is margin: 0 by default, so
+   without this they sit flush against the paragraph above and read as part of it. */
+.legal h3 {
+  margin-top: 26px;
+  font-size: 1.06rem;
+}
+
 .legal p,
 .legal ul {
   margin-top: 14px;

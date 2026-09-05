@@ -29,11 +29,17 @@
   <article class="legal">
     <div class="wrap">
       <h1>Privacy policy</h1>
-      <p class="updated">Version 1 · Effective 1 September 2026 · Applies to Emimate for Android,
-    package <code>com.emimate.app</code>, version 1.0.0 and later</p>
+      <p class="updated">Version 2 · Effective 5 September 2026 · Applies to Emimate for Android,
+    package <code>com.emimate.app</code>, version 1.5.0 and later</p>
       <p class="lead"><strong>Emimate collects no personal data.</strong> All information recorded
       by the user remains in the app's private storage, on the device. The developer neither
       receives nor holds any data, and has no technical means of obtaining it.</p>
+      <p class="lead">One copy does leave the device, and it is the operating system that takes it,
+      not the app: with the <strong>backup</strong> switched on, Android keeps the diary in the
+      user's own Google Drive, so that losing or replacing a phone does not mean losing the diary.
+      The copy stays in the user's account, which only they can reach; the developer does not
+      receive it and has no knowledge of it. The feature is on by default and is switched off in
+      the app's settings. Section 5 sets it out in full.</p>
 
       <h2><span class="num">1.</span> Controller and scope</h2>
       <p>Emimate is published by an independent developer, reachable at
@@ -61,13 +67,21 @@
           <td>The same private storage</td>
           <td>Retaining the configuration chosen by the user</td>
         </tr>
+        <tr>
+          <td>The backup copy: the diary and the settings, written by the app as two CSV files</td>
+          <td>In that same private storage and, where the feature is on, in the user's own Google
+              Drive, which Android places it in</td>
+          <td>Allowing the diary to be found again on a new device</td>
+        </tr>
       </table>
       </div>
       <p>Diary entries describe the user's state of health, which Regulation (EU) 2016/679 treats as
       a special category of personal data. It is precisely for that reason that the app is designed
-      so that such information never leaves the device, unless the user arranges its transfer. No
-      other app is able to access that storage, nor can the developer. There is no account, no
-      sign-in procedure and no server.</p>
+      to transmit nothing of its own accord. There are only two circumstances in which the diary
+      leaves the device: Android's backup, which can be switched off, and the export of a file,
+      which requires an act of the user. Section 5 sets out both. No other app is able to access
+      that storage, nor can the developer. There is no account, no sign-in procedure and no server
+      of the developer's.</p>
 
       <h2><span class="num">3.</span> The technical basis for the statements above</h2>
       <p>Emimate does not request the <code>INTERNET</code> permission. Android enforces this:
@@ -75,8 +89,12 @@
       connection. This is not a setting that can be altered silently on an installed app; it is a
       declaration contained in the manifest, which anyone can extract from the installed package and
       verify.</p>
-      <p>Android's automatic backup is also disabled (<code>allowBackup="false"</code>), so the
-      system does not copy the diary to Google Drive.</p>
+      <p>Android's automatic backup is on (<code>allowBackup="true"</code>). It is a feature of the
+      operating system and not of the app, which, having no <code>INTERNET</code> permission, could
+      not transmit the file itself. What is copied is declared in the manifest, in
+      <code>backup_rules.xml</code> and <code>data_extraction_rules.xml</code>, and is equally open
+      to inspection: only the two CSV files the app writes for the purpose, and not the
+      database.</p>
       <p>The app integrates no advertising network, no analytics library, no crash reporting service
       and no third-party SDK. No party is informed that the app has been opened, or when.</p>
 
@@ -102,6 +120,30 @@
       user.</p>
 
       <h2><span class="num">5.</span> Transfers arranged by the user</h2>
+      <p>The diary leaves the device in two circumstances only, both of them the user's to
+      decide.</p>
+
+      <h3>a) The backup copy in the user's own Google Drive</h3>
+      <p>Where the feature is on, Android periodically takes two CSV files — the diary and the
+      settings — and places them in the space reserved for the app inside the Google Drive attached
+      to the user's account. The operation is carried out by the operating system, at a moment of
+      its choosing, when the device is idle, charging and connected to Wi-Fi. The app takes no part
+      in it and, having no <code>INTERNET</code> permission, would not be able to carry it out.</p>
+      <p>The copy is protected by the credentials of the user's Google account and, on devices
+      running Android 9 and later, is end-to-end encrypted with the device's screen lock, so that
+      not even Google can read its contents. The developer does not reach it, is not told of it, and
+      has no technical means of obtaining it. Google's handling of the copy is governed by Google's
+      own terms and privacy policy, which the user is party to by virtue of holding the account.</p>
+      <p>The feature is on by default, because losing a phone is the event that most often loses a
+      diary. It is switched off under <em>Settings → Backup</em>, where the date of the last copy is
+      also shown, along with how often one may be taken. Switched off, the app stops updating the two
+      files and Android has nothing left to take.</p>
+      <p>The copy returns when the app is installed on a new device. At that point the app asks
+      whether to restore the diary, giving the date of the copy and the number of attacks in it; if
+      the answer is no, the copy is deleted, and so is neither put back into the diary nor kept on
+      the device.</p>
+
+      <h3>b) Exporting a file</h3>
       <p>Emimate allows the diary to be exported in CSV format and a report to be produced in PDF
       format for the user's doctor, and allows either to be passed to another app through the Android
       share function. This occurs solely at the user's request: the user determines the moment, the
@@ -112,17 +154,26 @@
 
       <h2><span class="num">6.</span> Retention period</h2>
       <p>The diary remains on the device until deleted by the user. There is no expiry and no
-      automatic clean-up, as no information is held elsewhere and there is no data for the developer
-      to retain or erase.</p>
+      automatic clean-up, and there is no data for the developer to retain or erase.</p>
+      <p>Where the backup is on, the copy placed in the user's Google Drive remains for as long as
+      Google's terms provide, and is governed by them. Google removes the copy after a period during
+      which the app has not been used, or once the app is uninstalled from the device.</p>
 
       <h2><span class="num">7.</span> Erasure of data</h2>
       <ul>
         <li><strong>A single attack:</strong> open it in the app and select <em>Delete</em>.</li>
-        <li><strong>The whole diary:</strong> uninstall the app. Android removes its private storage
-            at the same time. In the absence of backups and of copies on any server, the erasure is
-            complete and final. The same result is obtained from the Android settings, under
-            <em>Apps → Emimate → Storage → Clear storage</em>, where the app is to be kept
-            installed.</li>
+        <li><strong>The whole diary:</strong> from the app's settings, under <em>Delete → Delete
+            all data</em>. The action cannot be undone and says so. A box, unticked by default,
+            extends the deletion to the backup copy; ticking it asks a second time, since that half
+            of the action admits of no remedy.</li>
+        <li><strong>Uninstalling:</strong> Android removes the app's private storage at the same
+            time. The same result is obtained, with the app kept installed, from the Android
+            settings under <em>Apps → Emimate → Storage → Clear storage</em>.</li>
+        <li><strong>The copy placed in Google Drive:</strong> no app has the power to remove it
+            directly, and Emimate is no exception. Deleting the backup from the settings empties the
+            app's own files, and Android replaces the copy in Drive with them at the next backup.
+            The copy is likewise removed by Google once the app is uninstalled, or through the
+            settings of the user's Google account.</li>
       </ul>
       <p>Restoring a backup never entails an erasure: it adds the attacks contained in the file,
       updates those the file describes differently, and leaves the remainder unaltered. Erasure is
@@ -140,8 +191,15 @@
       (<a href="https://www.garanteprivacy.it">garanteprivacy.it</a>).</p>
 
       <h2><span class="num">9.</span> Transfers to third countries</h2>
-      <p>None take place. As no data is transmitted, no transfer occurs, either within or outside the
-      European Economic Area.</p>
+      <p>The developer makes no transfer, either within or outside the European Economic Area, as
+      the developer receives no data.</p>
+      <p>Where the backup is on, the placing of the copy in the user's Google Drive is carried out
+      by Google, which may hold it on its own servers, including servers outside the European
+      Economic Area. That transfer is between the user and Google, under the relationship already
+      existing between them by virtue of the account, and is governed by Google's privacy policy. On
+      devices running Android 9 and later the copy is end-to-end encrypted with the device's screen
+      lock, so its contents are not readable by Google. Anyone wishing to avoid that transfer
+      altogether switches the backup off in the app's settings.</p>
 
       <h2><span class="num">10.</span> Children</h2>
       <p>Emimate is not directed at children and collects no information from any user, of any
@@ -154,10 +212,9 @@
 
       <h2><span class="num">12.</span> Changes to this policy</h2>
       <p>Each new version is published at this address, with a new version number and a new date at
-      the top. As the app collects no data, any change would concern clarity of expression or a new
-      feature of the app, rather than the introduction of newly collected data. Should a future
-      version of the app ever collect or transmit information, the change would be described here
-      before taking effect.</p>
+      the top. Version 2 of this policy sets out Android's backup, introduced in version 1.5.0 of
+      the app. Should a future version of the app ever collect or transmit further information, the
+      change would be described here before taking effect.</p>
 
       <h2><span class="num">13.</span> Contact</h2>
       <p>Enquiries concerning this policy:
